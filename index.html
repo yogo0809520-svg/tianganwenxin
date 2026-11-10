@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>十干問心・天干性格測試</title>
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e8e2d0;--paper:#f3eedf;--ink:#1e2622;--mute:#5d665f;--red:#a8281f;--line:#b9ae92;--blue:#3b5a5c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161b19;--paper:#202724;--ink:#e6dfca;--mute:#9aa59c;--red:#d4574a;--line:#3d4741;--blue:#7fa6a4}}
+:root[data-theme="dark"]{--bg:#161b19;--paper:#202724;--ink:#e6dfca;--mute:#9aa59c;--red:#d4574a;--line:#3d4741;--blue:#7fa6a4}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Serif TC","Songti TC","PMingLiU",serif;line-height:1.9;
+background-image:radial-gradient(circle at 15% 0,rgba(59,90,92,.12),transparent 40%),radial-gradient(circle at 90% 100%,rgba(168,40,31,.08),transparent 40%)}
+main{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+.brush{font-family:"Ma Shan Zheng","KaiTi","STKaiti",serif}
+.hero{display:flex;gap:22px;align-items:flex-start;justify-content:center;padding:24px 0 8px}
+.vt{writing-mode:vertical-rl;font-size:clamp(40px,11vw,68px);letter-spacing:.18em;line-height:1.15;margin:0;font-weight:400}
+.vs{writing-mode:vertical-rl;color:var(--mute);letter-spacing:.3em;font-size:15px;padding-top:10px;border-right:1px solid var(--line);padding-right:14px}
+.seal{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:var(--red);color:#f6e9d0;border-radius:4px;font-size:22px;transform:rotate(-4deg)}
+.panel{background:var(--paper);border:1px solid var(--line);outline:1px solid var(--line);outline-offset:-7px;padding:28px 26px;margin:22px 0;position:relative}
+.panel::before,.panel::after{content:"";position:absolute;width:18px;height:18px;border:2px solid var(--red)}
+.panel::before{top:-1px;left:-1px;border-right:0;border-bottom:0}.panel::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.intro{text-align:center;color:var(--mute);margin:10px 0 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+@media(min-width:560px){.grid{grid-template-columns:repeat(5,1fr)}}
+.chip{border:1px solid var(--line);padding:10px 4px;text-align:center;background:transparent;color:var(--ink);font:inherit;cursor:pointer}
+.chip:hover,.chip:focus-visible{border-color:var(--red);outline:none}
+.chip b{display:block;font-size:26px;font-weight:400}.chip small{color:var(--mute);font-size:12px;line-height:1.4;display:block}
+button.go{display:block;margin:22px auto 0;background:var(--red);color:#f6e9d0;border:0;padding:12px 40px;font:inherit;font-size:19px;letter-spacing:.4em;cursor:pointer;border-radius:2px}
+button.go:focus-visible,.opt:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+button.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.prog{height:3px;background:var(--line);margin-bottom:18px}.prog i{display:block;height:100%;background:var(--red);transition:width .3s}
+.qn{color:var(--red);font-size:15px;letter-spacing:.2em}
+.q{font-size:21px;margin:6px 0 16px;line-height:1.6}
+.opt{display:block;width:100%;text-align:left;margin:10px 0;padding:12px 16px;background:transparent;color:var(--ink);border:1px solid var(--line);font:inherit;font-size:16px;cursor:pointer;line-height:1.7}
+.opt:hover{border-color:var(--red);background:rgba(168,40,31,.07)}
+.back{background:none;border:0;color:var(--mute);font:inherit;cursor:pointer;margin-top:10px;padding:4px 0}
+.big{font-size:clamp(90px,28vw,150px);line-height:1.1;text-align:center;color:var(--red);margin:0}
+.sub{text-align:center;color:var(--mute);letter-spacing:.2em;margin:0}
+h2{font-weight:600;font-size:20px;margin:22px 0 4px;color:var(--blue)}
+h2::before{content:"";display:inline-block;width:6px;height:6px;background:var(--red);margin-right:10px;vertical-align:middle;transform:rotate(45deg)}
+p{margin:4px 0}.tags{text-align:center;margin:10px 0}.tags span{display:inline-block;border:1px solid var(--red);color:var(--red);padding:0 12px;margin:3px;font-size:15px}
+.bars div{display:flex;align-items:center;gap:10px;margin:4px 0;font-size:15px}.bars em{font-style:normal;width:22px}
+.bars i{display:block;height:8px;background:var(--blue);opacity:.75}.bars span{flex:1}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.row button.go{margin:20px 4px 0;letter-spacing:.2em}
+.dc{text-align:center;margin-top:22px;padding-top:16px;border-top:1px solid var(--line)}.dc a{display:inline-block;margin-top:6px;color:var(--red);border:1px solid var(--red);padding:6px 22px;text-decoration:none;letter-spacing:.15em}.dc a:hover,.dc a:focus-visible{background:var(--red);color:var(--paper);outline:none}.note{text-align:center;color:var(--mute);font-size:13px;margin-top:14px}
+.hide{display:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+<span class="vs">十干問心　觀照本性</span>
+<h1 class="vt brush">天干問心</h1>
+<span class="seal brush" aria-hidden="true">命</span>
+</header>
+<p class="intro">十五問，叩問本心。依天干五行，判你屬哪一干。</p>
+
+<section id="home" class="panel">
+<p style="text-align:center">甲乙木、丙丁火、戊己土、庚辛金、壬癸水。<br>陽干剛健外放，陰干柔細內斂。點選下方可先觀其側重：</p>
+<div class="grid" id="grid"></div>
+<div id="peek" class="hide" style="margin-top:18px;border-top:1px solid var(--line);padding-top:6px"></div>
+<button class="go brush" id="start">開　始</button>
+</section>
+
+<section id="quiz" class="panel hide">
+<div class="prog"><i id="bar"></i></div>
+<div class="qn" id="qn"></div>
+<div class="q" id="qt"></div>
+<div id="opts"></div>
+<button class="back" id="back">← 上一題</button>
+</section>
+
+<section id="res" class="panel hide"></section>
+<p class="note">※ 本測試非專業測試，僅供文化趣味參考，非命理論斷。</p>
+</main>
+<script>
+const S=[
+{n:"甲",e:"陽木",i:"參天大樹",k:"領導・開創・正直",f:"側重開拓與擔當。如棟樑立於林中，性直而志高，凡事願為先鋒，重原則、重承諾，不肯折腰。",s:"有魄力、有遠見，能為團隊撐起一片天，天生的領頭人。",w:"過於剛直易顯固執，不善低頭；宜學會傾聽，剛柔並濟。"},
+{n:"乙",e:"陰木",i:"花草藤蔓",k:"柔韌・協調・親和",f:"側重適應與人緣。如藤蔓依勢而上，外柔內韌，擅長圓融周旋，審時度勢，在逆境中也能找到出路。",s:"情商高、柔中帶韌，善於合作與審美，能化解僵局。",w:"易依賴他人或搖擺不定；宜確立自己的主張，勿只隨風而倒。"},
+{n:"丙",e:"陽火",i:"太陽烈日",k:"熱情・光明・外放",f:"側重感染與表現。如日照萬物，坦蕩熱烈，樂於付出，走到哪裡都是焦點，自帶號召力。",s:"樂觀大方、行動力強，能點燃他人的熱情與信心。",w:"鋒芒太盛、性急少耐；宜留意細節，也給他人發光的空間。"},
+{n:"丁",e:"陰火",i:"燭火燈燄",k:"專注・細膩・溫暖",f:"側重洞察與守護。如燈燭照夜，光雖小而暖，心思敏銳，擅長鑽研與體貼他人，情感深厚。",s:"專注持久、感受力強，能在暗處給人慰藉與方向。",w:"易內耗、多思多慮；宜學會表達，不必凡事獨自默默承擔。"},
+{n:"戊",e:"陽土",i:"高山厚土",k:"穩重・包容・信用",f:"側重承載與信義。如山嶽巍然，沉穩可靠，言出必行，是眾人倚靠的靠山，不輕易動搖。",s:"踏實可信、格局開闊，遇事不慌，能穩定團隊的軍心。",w:"偏於保守、反應較慢；宜適度嘗試新事物，別讓穩變成停滯。"},
+{n:"己",e:"陰土",i:"田園沃壤",k:"滋養・務實・謙和",f:"側重培育與調和。如良田育苗，默默滋養，心思細密，擅長照顧、整理與統籌，重實際而不張揚。",s:"耐心包容、善於成就他人，是團隊中最溫潤的後盾。",w:"易委屈自己、顧慮過多；宜勇於說不，也為自己爭取應得。"},
+{n:"庚",e:"陽金",i:"刀劍鋼鐵",k:"果決・義氣・魄力",f:"側重決斷與正義。如寶劍出鞘，是非分明，行事乾脆，講義氣、敢擔當，遇不平必挺身而出。",s:"執行力強、不拖泥帶水，在危機時最能斬斷亂麻。",w:"言語直硬、易得罪人；宜收斂鋒芒，給溫柔留一點位置。"},
+{n:"辛",e:"陰金",i:"珠玉首飾",k:"精緻・敏銳・自尊",f:"側重品味與完美。如美玉須琢，眼光獨到，追求精緻，有高度的自尊與審美，重細節與品質。",s:"洞察力強、表達得體，在專業與藝術領域容易出類拔萃。",w:"自尊心強、易挑剔敏感；宜接納不完美，學會放過自己。"},
+{n:"壬",e:"陽水",i:"江河大海",k:"智慧・奔放・包容",f:"側重流動與視野。如江河入海，思路廣闊，好奇心旺，善於變通與謀略，不願被束縛。",s:"聰明靈活、胸襟寬廣，能整合資源，開闊局面。",w:"不易定性、容易三分鐘熱度；宜給奔流立下堤岸，專注一處。"},
+{n:"癸",e:"陰水",i:"雨露清泉",k:"內斂・靈感・柔潤",f:"側重直覺與沉澱。如細雨潤物，安靜深邃，想像力與感知力極強，善於默察人心，潛移默化。",s:"心思縝密、富於靈感，擅長思考、研究與療癒人心。",w:"易敏感消極、想得多做得少；宜勇敢踏出第一步，讓靈感落地。"}
+];
+const Q=[
+["面對一項新計劃，你通常——",[["帶頭衝鋒，先動起來再說",0,2],["順勢試探，邊做邊調整",1,8],["先穩住根基，確保萬無一失",4,5],["精準決斷，去蕪存菁",6,7]]],
+["與人相處，你更像——",[["熱情洋溢，照亮全場",2,3],["默默守在一個人身邊",3,9],["來者不拒，兼容並蓄",8,4],["正直坦率，不愛拐彎",0,6]]],
+["壓力臨頭時，你會——",[["挺直腰桿，絕不低頭",0,6],["彎下身子，等風過去",1,5],["沉潛獨處，靜靜消化",9,7],["痛快發洩一番，把火散出去",2,8]]],
+["理想的週末是——",[["登山遠行，看開闊天地",8,0],["花園裡煮茶、侍弄花草",1,5],["獨自讀書、聽雨",9,3],["與一群朋友熱鬧歡聚",2,4]]],
+["你最想成就的是——",[["一番功業，名揚天下",6,0],["日積月累的深厚根基",5,4],["自由自在，隨心而行",8,1],["照亮、溫暖更多的人",3,2]]],
+["旁人最常這樣評價你——",[["可靠得像座山",4,0],["有原則，做事鋒利",6,7],["溫柔細膩",9,1],["熱烈直接",2,3]]],
+["做重大決定時，你靠——",[["直覺與靈感",8,2],["反覆思量，權衡再三",9,5],["利弊得失，分析清楚",7,6],["是否合乎道義與本心",0,4]]],
+["犯了錯，你會——",[["坦然承擔，絕不推諉",4,0],["暗自反省，琢磨許久",3,9],["圓融處理，化於無形",1,8],["乾脆認錯，立刻改正",6,2]]],
+["你的工作風格是——",[["開創新局的拓荒者",0,8],["精雕細琢的匠人",7,3],["協調各方的統籌者",5,1],["鼓舞士氣的激勵者",2,4]]],
+["朋友遇到難處，你會——",[["兩肋插刀，立刻出手",6,0],["靜靜陪伴，認真傾聽",9,5],["給予溫暖而中肯的建議",3,1],["提供資源，穩住局面",4,8]]],
+["你偏愛的事物是——",[["精美的器物、飾品",7,6],["一桌好菜、一碗熱湯",5,3],["說走就走的旅行",8,2],["草木花園與自然",1,0]]],
+["與人起衝突時，你——",[["直言不諱，當面說清",2,6],["先退一步，冷靜觀察",9,7],["以柔克剛，軟中帶硬",1,5],["居中調停，求兩全",4,8]]],
+["理想的居所氛圍是——",[["開闊敞亮，有山有水",0,8],["精緻安靜，一塵不染",7,9],["溫暖熱鬧，高朋滿座",2,3],["安穩踏實，四平八穩",4,5]]],
+["你對自己最大的期許——",[["成為撐起一方的棟樑",0,4],["成為通達世事的智者",8,9],["成為一束光",2,3],["成為利刃，或一塊美玉",6,7]]],
+["你最害怕——",[["停滯不前，被困原地",8,1],["失信於人，名譽受損",4,6],["被人忽視，無人懂我",3,7],["局面失控，無從掌握",5,9]]]
+];
+const $=id=>document.getElementById(id);
+let cur=0,sc,ans;
+$("grid").innerHTML=S.map((s,i)=>`<button class="chip" data-i="${i}"><b class="brush">${s.n}</b><small>${s.e}・${s.i}</small></button>`).join("");
+$("grid").onclick=e=>{const c=e.target.closest(".chip");if(!c)return;const s=S[c.dataset.i],p=$("peek");
+p.innerHTML=`<h2>${s.n}　${s.e}・${s.i}</h2><p><b>側重：</b>${s.f}</p><p style="color:var(--mute)">關鍵詞：${s.k}</p>`;p.classList.remove("hide")};
+function show(id){["home","quiz","res"].forEach(x=>$(x).classList.toggle("hide",x!==id));window.scrollTo(0,0)}
+function render(){const q=Q[cur];$("bar").style.width=(cur/Q.length*100)+"%";$("qn").textContent="第 "+(cur+1)+" 問 ／ 共 "+Q.length+" 問";
+$("qt").textContent=q[0];$("opts").innerHTML=q[1].map((o,i)=>`<button class="opt" data-i="${i}">${o[0]}</button>`).join("");
+$("back").style.visibility=cur?"visible":"hidden"}
+$("start").onclick=()=>{cur=0;ans=[];show("quiz");render()};
+$("opts").onclick=e=>{const b=e.target.closest(".opt");if(!b)return;ans[cur]=+b.dataset.i;cur++;cur<Q.length?render():result()};
+$("back").onclick=()=>{if(cur){cur--;ans.length=cur;render()}};
+function result(){sc=Array(10).fill(0);ans.forEach((a,qi)=>{const o=Q[qi][1][a];sc[o[1]]+=2;sc[o[2]]+=1});
+const ord=sc.map((v,i)=>[v,i]).sort((a,b)=>b[0]-a[0]),t=ord[0][1],s=S[t],sec=S[ord[1][1]],mx=ord[0][0];
+$("res").innerHTML=`<p class="sub">你的天干是</p><p class="big brush">${s.n}</p><p class="sub">${s.e}・${s.i}</p>
+<div class="tags">${s.k.split("・").map(k=>`<span>${k}</span>`).join("")}</div>
+<h2>性格側重</h2><p>${s.f}</p><h2>天賦所長</h2><p>${s.s}</p><h2>修身提點</h2><p>${s.w}</p>
+<h2>次要氣質</h2><p>你亦帶有「${sec.n}・${sec.i}」的影子：${sec.k.replace(/・/g,"、")}。</p>
+<h2>十干分佈</h2><div class="bars">${S.map((x,i)=>`<div><em class="brush">${x.n}</em><span><i style="width:${Math.round(sc[i]/mx*100)}%"></i></span></div>`).join("")}</div>
+<div class="row"><button class="go brush" id="again">重　測</button><button class="go ghost" id="home2">回首頁</button></div>
+<div class="dc"><p class="brush" style="font-size:22px;color:var(--ink)">來化外，尋你同道</p><p>山高水遠，知己難逢。<br>化外之地，自有與你同氣相求之人，<br>且來此處，把酒論干，共話此心。</p><a href="https://discord.gg/D5Ps5A588s" target="_blank" rel="noopener noreferrer">入化外　尋同道</a></div>
+<p class="note">非專業測試，結果僅供文化趣味參考。</p>`;
+$("again").onclick=$("start").onclick;$("home2").onclick=()=>show("home");show("res")}
+</script>
+</body>
+</html>
